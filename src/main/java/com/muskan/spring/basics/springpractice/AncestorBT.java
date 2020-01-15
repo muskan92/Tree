@@ -2,7 +2,7 @@ package com.muskan.spring.basics.springpractice;
 
 public class AncestorBT {
 
-    
+
     BTNode root;
     BTNode ancestr;
     int found = 0;
