@@ -13,6 +13,9 @@ class FileReadTestTest {
 
     @Test
     void fileRead() {
-        FileReadTest.fileRead();
+        //FileReadTest.fileRead();
+        String FOLDER_PATH = "D:\\Muskan\\PET";
+
+        FileReadTest.listFilesAndFilesSubDirectories(FOLDER_PATH);
     }
 }

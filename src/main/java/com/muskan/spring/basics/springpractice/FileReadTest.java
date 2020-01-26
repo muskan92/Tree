@@ -7,16 +7,13 @@ package com.muskan.spring.basics.springpractice;
         import java.nio.file.Files;
         import java.nio.file.Path;
         import java.nio.file.Paths;
-        import java.util.ArrayList;
-        import java.util.List;
-        import java.util.Map;
-        import java.util.TreeMap;
+        import java.util.*;
 
 public class FileReadTest {
 
     private static final String FOLDER_PATH = "D:\\Muskan\\PET";
 
- /*   public static void fileRead() {
+/*    public static void fileRead() {
         Path folderPath = Paths.get(FOLDER_PATH);
 
         // prepare a data structure for a file's name and content
@@ -54,7 +51,7 @@ public class FileReadTest {
         });
     }*/
 
-    public static void fileRead(){
+    /*public static void fileRead(){
         StringBuilder sb = new StringBuilder();
 
         try (BufferedReader br = Files.newBufferedReader(Paths.get("D:\\Muskan\\PET\\Biograph 16 Truepoints\\ACSMonitorNlsMessageId.mc"))) {
@@ -70,19 +67,23 @@ public class FileReadTest {
         }
 
         System.out.println(sb);
-    }
+    }*/
 
-    public void listFilesAndFilesSubDirectories(String directoryName){
+    public static void listFilesAndFilesSubDirectories(String directoryName){
         File directory = new File(directoryName);
         //get all the files from a directory
         File[] fList = directory.listFiles();
         for (File file : fList){
             if (file.isFile()){
-                System.out.println(file.getAbsolutePath());
+                //System.out.println(file.getAbsolutePath());
             } else if (file.isDirectory()){
                 listFilesAndFilesSubDirectories(file.getAbsolutePath());
             }
         }
+
+        Arrays.stream(fList).forEach(i->{
+            System.out.println(i);
+        });
     }
 
 }
