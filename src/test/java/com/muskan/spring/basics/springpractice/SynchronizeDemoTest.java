@@ -37,4 +37,9 @@ public class SynchronizeDemoTest {
 
         //Assert.assertEquals(1000,SynchronizeTest.count);
     }
+
+    @Test
+    public void testmethod(){
+        System.out.print("hg");
+    }
 }

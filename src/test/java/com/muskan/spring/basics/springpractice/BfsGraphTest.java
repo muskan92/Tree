@@ -59,11 +59,25 @@ class BfsGraphTest {
 
         bg.bfs(1);
 
+        System.out.print("with Key set");
+
         bg.graphMap.keySet().stream().forEach(k->{
             System.out.println(k+" "+bg.graphMap.get(k));
         });
+    System.out.print("with Entry set");
+        bg.graphMap.entrySet().stream().forEach(e->{
+            System.out.println(e.getKey()+" "+e.getValue());
+        });
 
-bg.visited.stream().forEach(s->{System.out.println(s);});
+        System.out.print("visited set");
+
+        bg.visited.stream().forEach(s->{System.out.println(s);});
+
+        System.out.println("DFS called");
+
+        DfsGraph dg = new DfsGraph();
+        dg.graphMap.putAll(bg.graphMap);
+        dg.dfs(1);
 
     }
 }
