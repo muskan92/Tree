@@ -7,13 +7,14 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class SynchronizedHashMapTest{
 
     @Test
     public void SynchronizedHashMaptestmethod() throws InterruptedException {
-       Map sm = new SynchronizedHashMap(); //ConcurrentHashMapDemo();
+       Map sm = new SynchronizedHashMap();
 
         System.out.println(sm.get(69));
         ExecutorService es = Executors.newFixedThreadPool(10);
@@ -36,6 +37,30 @@ public class SynchronizedHashMapTest{
         long duration = (endTime - startTime);
 
         System.out.println("duration: " +(duration/1000000000));
+
+    }
+
+    @Test
+    public void concurrentHashMaptestmethod() throws InterruptedException {
+        Map<String, AtomicInteger> ch = new ConcurrentHashMap<>();
+        AtomicInteger a = new AtomicInteger(1);
+        ch.put("one1",a);
+//        ch.put("one2",1000);
+//        ch.put("one3",2000);
+//        ch.put("one4",3000);
+
+        ExecutorService es = Executors.newFixedThreadPool(105);
+        IntStream.range(1,500).forEach(i->{
+            es.execute(()->ch.get("one1").getAndIncrement());
+        });
+
+        es.shutdown();
+        es.awaitTermination(60,TimeUnit.SECONDS);
+
+        IntStream.range(1,5).forEach(i->{
+                    System.out.println(ch.get("one"+i));
+        });
+
 
     }
 
