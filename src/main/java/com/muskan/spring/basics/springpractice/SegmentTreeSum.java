@@ -19,6 +19,7 @@ public class SegmentTreeSum {
 
         return;
 
+
     }
 
     public int sumOfRange(int sr, int er, int sga[], int s, int e, int curr){
