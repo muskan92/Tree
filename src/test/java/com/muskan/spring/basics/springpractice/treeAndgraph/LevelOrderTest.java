@@ -1,9 +1,9 @@
-package com.muskan.spring.basics.springpractice;
+package com.muskan.spring.basics.springpractice.treeAndgraph;
 
+import com.muskan.spring.basics.springpractice.treeAndgraph.BTNode;
+import com.muskan.spring.basics.springpractice.treeAndgraph.LevelOrder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class LevelOrderTest {
 

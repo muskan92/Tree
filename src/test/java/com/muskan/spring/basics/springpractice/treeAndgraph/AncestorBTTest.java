@@ -1,10 +1,10 @@
-package com.muskan.spring.basics.springpractice;
+package com.muskan.spring.basics.springpractice.treeAndgraph;
 
+import com.muskan.spring.basics.springpractice.treeAndgraph.AncestorBT;
+import com.muskan.spring.basics.springpractice.treeAndgraph.BTNode;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class AncestorBTTest {
 

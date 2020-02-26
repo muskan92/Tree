@@ -1,9 +1,8 @@
-package com.muskan.spring.basics.springpractice;
+package com.muskan.spring.basics.springpractice.treeAndgraph;
 
+import com.muskan.spring.basics.springpractice.treeAndgraph.BinarySearch;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class BinarySearchTest {
     BinarySearch bs;

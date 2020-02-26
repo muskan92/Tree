@@ -1,10 +1,9 @@
 package com.muskan.spring.basics.springpractice;
 
+import com.muskan.spring.basics.springpractice.treeAndgraph.Address;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class CustomerTest {
 

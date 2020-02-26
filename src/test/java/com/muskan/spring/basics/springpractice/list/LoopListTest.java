@@ -1,5 +1,7 @@
-package com.muskan.spring.basics.springpractice;
+package com.muskan.spring.basics.springpractice.list;
 
+import com.muskan.spring.basics.springpractice.list.ListNode;
+import com.muskan.spring.basics.springpractice.list.LoopList;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,11 +1,10 @@
-package com.muskan.spring.basics.springpractice;
+package com.muskan.spring.basics.springpractice.treeAndgraph;
 
+import com.muskan.spring.basics.springpractice.treeAndgraph.SegmentTreeSum;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SegmentTreeSumTest {
 

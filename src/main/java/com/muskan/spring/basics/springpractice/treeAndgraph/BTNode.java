@@ -1,4 +1,4 @@
-package com.muskan.spring.basics.springpractice;
+package com.muskan.spring.basics.springpractice.treeAndgraph;
 
 public class BTNode implements Comparable<BTNode>{
 

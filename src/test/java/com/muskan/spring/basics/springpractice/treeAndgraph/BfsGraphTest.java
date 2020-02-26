@@ -1,4 +1,4 @@
-package com.muskan.spring.basics.springpractice;
+package com.muskan.spring.basics.springpractice.treeAndgraph;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,7 @@ class BfsGraphTest {
     @Test
     void bfs() {
 
-        BfsGraph bg = new BfsGraph();
+        Address.BfsGraph bg = new Address.BfsGraph();
         bg.graphMap.put(1,new ArrayList<>());
         bg.graphMap.get(1).add(2);
         bg.graphMap.get(1).add(3);

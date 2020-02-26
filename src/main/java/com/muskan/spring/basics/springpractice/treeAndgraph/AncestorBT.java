@@ -1,4 +1,6 @@
-package com.muskan.spring.basics.springpractice;
+package com.muskan.spring.basics.springpractice.treeAndgraph;
+
+import com.muskan.spring.basics.springpractice.treeAndgraph.BTNode;
 
 public class AncestorBT {
 
