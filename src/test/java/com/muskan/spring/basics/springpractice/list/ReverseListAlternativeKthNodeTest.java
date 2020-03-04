@@ -35,5 +35,8 @@ class ReverseListAlternativeKthNodeTest {
 
         reverseList.printList(reverseList.head);
 
+        String s ="hd";
+        s.compareTo("jhg");
+
     }
 }

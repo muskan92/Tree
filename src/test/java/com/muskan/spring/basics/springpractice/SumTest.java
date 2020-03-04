@@ -27,7 +27,18 @@ public class SumTest {
 
     }
 
+    /*public void add(int a, long b){
+        System.out.print(a+'i');
+    }
+*/
+    public void add(long a, int b){
+        System.out.print("long");
+    }
+
     @Test
     public void testGetSum() {
+
+        this.add(10,10);
+
     }
 }
