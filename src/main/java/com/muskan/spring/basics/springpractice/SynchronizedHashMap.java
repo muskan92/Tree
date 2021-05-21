@@ -1,15 +1,12 @@
 package com.muskan.spring.basics.springpractice;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class SynchronizedHashMap<K,V> implements Map<K,V> {
 
     Map<K,V> syncMap = new HashMap<>();
 
-    private Object lock = new Object();
+   // private Object lock = new Object();
 
     @Override
     public int size() {
@@ -33,25 +30,16 @@ public class SynchronizedHashMap<K,V> implements Map<K,V> {
 
     @Override
     public V get(Object key) {
-        synchronized (lock){
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        synchronized (syncMap){
+
             return syncMap.get(key);
         }
     }
 
     @Override
     public V put(K key, V value) {
-        synchronized (lock){
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            return syncMap.put(key,value);
+        synchronized (syncMap){
+           return syncMap.put(key,value);
 
         }
     }
@@ -68,6 +56,8 @@ public class SynchronizedHashMap<K,V> implements Map<K,V> {
 
     @Override
     public void clear() {
+
+        Map<K, V> kvMap = Collections.synchronizedMap(syncMap);
 
     }
 

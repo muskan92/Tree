@@ -2,9 +2,10 @@ package com.muskan.spring.basics.springpractice;
 
 import com.muskan.spring.basics.springpractice.treeAndgraph.Address;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Customer {
+public class Customer implements Serializable {
     Integer age;
     String name;
     Address address;

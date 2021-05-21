@@ -40,11 +40,7 @@ public class ConcurrentHashMapDemo<K,V> implements Map<K,V> {
     public V put(K key, V value) {
         b = key.hashCode()%16;
         synchronized (lock[b]){
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
             //System.out.println("lock[b]:"+lock[b]);
             return conMap.put(key,value);
         }
