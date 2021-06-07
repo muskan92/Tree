@@ -2,8 +2,7 @@ package com.muskan.spring.basics.springpractice;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -24,8 +23,31 @@ class HashMapSortByValueTest {
         map.put(5,"five");
         map.put(3,"three");
 
-        System.out.println(map);
-        HashMapSortByValue sk = new HashMapSortByValue();
-        sk.sortByVal((HashMap) map);
+        //Set<Map.Entry<Integer, String>> entries1 = map.entrySet();
+
+        List<Map.Entry<Integer, String>> entries = new ArrayList<>(map.entrySet());
+        Collections.sort(entries,(a,b)->
+             a.getValue().compareTo(b.getValue())
+        );
+        System.out.println(entries);
+
+        Collections.sort(entries,(a,b)->
+                a.getKey().compareTo(b.getKey())
+        );
+        System.out.println(entries);
+//        System.out.println(map);
+//        HashMapSortByValue sk = new HashMapSortByValue();
+//        sk.sortByVal((HashMap) map);
+
+
+    }
+}
+
+class ValueComparator implements Comparator<Map.Entry<Integer, String>>{
+
+
+    @Override
+    public int compare(Map.Entry<Integer, String> o1, Map.Entry<Integer, String> o2) {
+        return o1.getValue().compareTo(o2.getValue());
     }
 }

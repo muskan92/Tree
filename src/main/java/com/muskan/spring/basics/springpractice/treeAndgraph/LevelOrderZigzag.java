@@ -4,7 +4,20 @@ public class LevelOrderZigzag {
 
     BTNode root;
 
-    public void levelOrder(BTNode node){
+    public static void main(String[] args) {
+        BTNode node = new BTNode(1);
+        node.left = new BTNode(2);
+        node.right = new BTNode(3);
+        node.left.left = new BTNode(4);
+        node.left.right = new BTNode(5);
+        node.left.left.left = new BTNode(6);
+        node.left.left.right = new BTNode(7);
+        levelOrder(node);
+    }
+
+
+
+        public static void levelOrder(BTNode node){
 
         boolean flag = false;
 
@@ -19,7 +32,7 @@ public class LevelOrderZigzag {
 
     }
 
-    private void printZigzag(BTNode node, int level, boolean flag) {
+    private static void printZigzag(BTNode node, int level, boolean flag) {
 
         if(node == null){
             return;
