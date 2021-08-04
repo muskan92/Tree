@@ -29,11 +29,15 @@ class HashMapSortByValueTest {
         Collections.sort(entries,(a,b)->
              a.getValue().compareTo(b.getValue())
         );
-        System.out.println(entries);
+       /// System.out.println(entries);
+        //Collections.sort(al, Collections.reverseOrder());
 
         Collections.sort(entries,(a,b)->
-                a.getKey().compareTo(b.getKey())
+                b.getKey().compareTo(a.getKey())
         );
+
+        //Map.Entry<Integer, String> integerStringEntry = entries.get(0);
+
         System.out.println(entries);
 //        System.out.println(map);
 //        HashMapSortByValue sk = new HashMapSortByValue();

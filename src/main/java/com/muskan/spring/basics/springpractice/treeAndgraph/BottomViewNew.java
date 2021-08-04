@@ -3,7 +3,7 @@ package com.muskan.spring.basics.springpractice.treeAndgraph;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class TopViewNew {
+public class BottomViewNew {
 
     static Map<Integer,NodeDepthPair> map = new TreeMap<>();
 
@@ -46,25 +46,25 @@ public class TopViewNew {
         root.left.right.right.right = new Node(6);
 
 
-        topView(node,0,0);
+       bottomView(node,0,0);
         for(Map.Entry<Integer,NodeDepthPair> entry : map.entrySet()){
             System.out.println(entry.getValue().data);
         }
 
     }
 
-    private static void topView(Node node, int vd, int depth) {
+    private static void bottomView(Node node, int vd, int depth) {
         if(node == null)
             return;
 
         if(map.get(vd) == null){
             map.put(vd,new NodeDepthPair(node.data,depth));
         }
-        if(map.get(vd).depth>depth){
+        if(map.get(vd).depth<=depth){
             map.put(vd,new NodeDepthPair(node.data,depth));
         }
-        topView(node.left,vd-1,depth+1);
-        topView(node.right,vd+1,depth+1);
+        bottomView(node.left,vd-1,depth+1);
+        bottomView(node.right,vd+1,depth+1);
 
     }
 }
