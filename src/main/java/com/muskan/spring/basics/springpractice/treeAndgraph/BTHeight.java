@@ -1,7 +1,6 @@
 package com.muskan.spring.basics.springpractice.treeAndgraph;
 
-public class
-BTHeight {
+public class BTHeight {
 
     BTNode root;
 

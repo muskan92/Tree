@@ -1,0 +1,276 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffc9c77c2c4, pid=29016, tid=0x0000000000002fec
+#
+# JRE version: OpenJDK Runtime Environment (Zulu8.80.0.18-Gov-SA) (8.0_422-b05) (build 1.8.0_422-b05)
+# Java VM: OpenJDK 64-Bit Server VM (25.422-b05 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [cyjagent.dll+0xc2c4]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://www.azul.com/support/
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000023ce0266000):  JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=12268, stack(0x00000052b6100000,0x00000052b6200000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000023ce0266268, RCX=0x0000000000000000, RDX=0x0000023cb9f74420
+RSP=0x00000052b61fd1a0, RBP=0x0000023cbbd6f8d0, RSI=0x0000000000000000, RDI=0x0000023ce04244b0
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x0000023cb9f790f0, R13=0x0000000000000000, R14=0x00000052b61fd380, R15=0x0000000000000000
+RIP=0x00007ffc9c77c2c4, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x00000052b61fd1a0)
+0x00000052b61fd1a0:   0000023ce0266268 0000023ce0266268
+0x00000052b61fd1b0:   0000023cbbd6f8d0 00000000ffffffff
+0x00000052b61fd1c0:   0000000000000000 0000000000000000
+0x00000052b61fd1d0:   0000023ce02cffc0 0000023cbbd6f8d0
+0x00000052b61fd1e0:   0000000000000014 0000023cde4d09a0
+0x00000052b61fd1f0:   0000000000000000 0000000000000000
+0x00000052b61fd200:   0000000000000000 000000006f722568
+0x00000052b61fd210:   0000023cb9f790f0 0000023ce0266000
+0x00000052b61fd220:   0000023ce04244b0 0000023cb9f70eb0
+0x00000052b61fd230:   0000023ce04244b0 0000000000000000
+0x00000052b61fd240:   0000000000000342 0000023ce0424110
+0x00000052b61fd250:   00000052b61fd348 00000052b61fd260
+0x00000052b61fd260:   0000000000000000 000000000000004a
+0x00000052b61fd270:   0000023ce0266b30 0000023ce041fc40
+0x00000052b61fd280:   0000023ce04244d0 0000023ce0427c28
+0x00000052b61fd290:   00000000000083b0 0000023ce0266000 
+
+Instructions: (pc=0x00007ffc9c77c2c4)
+0x00007ffc9c77c2a4:   ff 15 06 50 01 00 48 8b 0d 17 4b 02 00 4c 8b c7
+0x00007ffc9c77c2b4:   33 d2 ff 15 44 4f 01 00 48 8b 4d 20 48 8b 55 10
+0x00007ffc9c77c2c4:   48 8b 01 48 8b 80 08 01 00 00 ff 15 0c 50 01 00
+0x00007ffc9c77c2d4:   85 c0 74 40 48 8b 0d 01 37 02 00 48 8d 15 fa 36 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x0000023ce0266268 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x0000023cb9f74420 is an unknown value
+RSP=0x00000052b61fd1a0 is pointing into the stack for thread: 0x0000023ce0266000
+RBP=0x0000023cbbd6f8d0 is an unknown value
+RSI=0x0000000000000000 is an unknown value
+RDI=0x0000023ce04244b0 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x0000023cb9f790f0 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x00000052b61fd380 is pointing into the stack for thread: 0x0000023ce0266000
+R15=0x0000000000000000 is an unknown value
+
+
+Stack: [0x00000052b6100000,0x00000052b6200000],  sp=0x00000052b61fd1a0,  free space=1012k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [cyjagent.dll+0xc2c4]
+V  [jvm.dll+0x192568]
+V  [jvm.dll+0x189cb9]
+V  [jvm.dll+0x189e2b]
+V  [jvm.dll+0x32899]
+V  [jvm.dll+0x4038a]
+V  [jvm.dll+0x5efc6]
+V  [jvm.dll+0x60750]
+V  [jvm.dll+0x61082]
+V  [jvm.dll+0x39b81]
+V  [jvm.dll+0x333bd]
+V  [jvm.dll+0x4038a]
+V  [jvm.dll+0x5efc6]
+V  [jvm.dll+0x60750]
+V  [jvm.dll+0x60b13]
+V  [jvm.dll+0xdbec2]
+V  [jvm.dll+0x9d3aa]
+V  [jvm.dll+0x9ab7f]
+C  0x0000023cbbda82bc
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.net.Socket.setImpl()V+26
+j  java.net.Socket.<init>(Ljava/net/SocketAddress;Ljava/net/SocketAddress;Z)V+51
+j  java.net.Socket.<init>(Ljava/lang/String;I)V+34
+j  com.intellij.rt.execution.application.AppMainV2$1.run()V+10
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000023ce030a800 JavaThread "Service Thread" daemon [_thread_blocked, id=13324, stack(0x00000052b6600000,0x00000052b6700000)]
+  0x0000023ce0289000 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=12048, stack(0x00000052b6500000,0x00000052b6600000)]
+  0x0000023ce0286800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=13764, stack(0x00000052b6400000,0x00000052b6500000)]
+  0x0000023ce0284800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=25760, stack(0x00000052b6300000,0x00000052b6400000)]
+  0x0000023ce0283800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=5676, stack(0x00000052b6200000,0x00000052b6300000)]
+=>0x0000023ce0266000 JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=12268, stack(0x00000052b6100000,0x00000052b6200000)]
+  0x0000023cde4d2000 JavaThread "Attach Listener" daemon [_thread_blocked, id=16856, stack(0x00000052b6000000,0x00000052b6100000)]
+  0x0000023cde4d1800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=16152, stack(0x00000052b5f00000,0x00000052b6000000)]
+  0x0000023cde4a3000 JavaThread "Finalizer" daemon [_thread_blocked, id=22552, stack(0x00000052b5e00000,0x00000052b5f00000)]
+  0x0000023cba01e000 JavaThread "Reference Handler" daemon [_thread_blocked, id=23484, stack(0x00000052b5d00000,0x00000052b5e00000)]
+
+Other Threads:
+  0x0000023cde472800 VMThread [stack: 0x00000052b5c00000,0x00000052b5d00000] [id=3812]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000023cb9f80240] Threads_lock - owner thread: 0x0000023cde472800
+[0x0000023cb9f80640] Heap_lock - owner thread: 0x0000023cb9f84800
+
+heap address: 0x00000005c4a00000, size: 8118 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 151552K, used 7803K [0x0000000716e00000, 0x0000000721700000, 0x00000007c0000000)
+  eden space 130048K, 6% used [0x0000000716e00000,0x000000071759ed10,0x000000071ed00000)
+  from space 21504K, 0% used [0x0000000720200000,0x0000000720200000,0x0000000721700000)
+  to   space 21504K, 0% used [0x000000071ed00000,0x000000071ed00000,0x0000000720200000)
+ ParOldGen       total 347136K, used 0K [0x00000005c4a00000, 0x00000005d9d00000, 0x0000000716e00000)
+  object space 347136K, 0% used [0x00000005c4a00000,0x00000005c4a00000,0x00000005d9d00000)
+ Metaspace       used 3293K, capacity 4500K, committed 4864K, reserved 1056768K
+  class space    used 346K, capacity 388K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x0000023ccb140000,0x0000023ccc120000] byte_map_base: 0x0000023cc831b000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006fd884b0
+ Begin Bits: [0x0000023cccbc0000, 0x0000023cd4a98000)
+ End Bits:   [0x0000023cd4a98000, 0x0000023cdc970000)
+
+Polling page: 0x0000023cba1a0000
+
+CodeCache: size=245760Kb used=1096Kb max_used=1099Kb free=244663Kb
+ bounds [0x0000023cbbd80000, 0x0000023cbbff0000, 0x0000023ccad80000]
+ total_blobs=265 nmethods=16 adapters=162
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.124 Thread 0x0000023ce0289000   15       2       java.lang.String::indexOf (70 bytes)
+Event: 0.124 Thread 0x0000023ce0284800 nmethod 10 0x0000023cbbe87a90 code [0x0000023cbbe87bc0, 0x0000023cbbe87c38]
+Event: 0.124 Thread 0x0000023ce0284800   13  s    4       java.lang.StringBuffer::append (13 bytes)
+Event: 0.124 Thread 0x0000023ce0289000 nmethod 15 0x0000023cbbe895d0 code [0x0000023cbbe89740, 0x0000023cbbe899b0]
+Event: 0.124 Thread 0x0000023ce0289000   16       3       java.lang.AbstractStringBuilder::append (50 bytes)
+Event: 0.124 Thread 0x0000023ce0289000 nmethod 16 0x0000023cbbe88990 code [0x0000023cbbe88b60, 0x0000023cbbe892c0]
+Event: 0.124 Thread 0x0000023ce0289000   17       1       java.lang.Object::<init> (1 bytes)
+Event: 0.124 Thread 0x0000023ce0289000 nmethod 17 0x0000023cbbe88610 code [0x0000023cbbe88760, 0x0000023cbbe88878]
+Event: 0.124 Thread 0x0000023ce0289000   18       3       java.util.concurrent.ConcurrentHashMap::tabAt (21 bytes)
+Event: 0.124 Thread 0x0000023ce0289000 nmethod 18 0x0000023cbbe93410 code [0x0000023cbbe93560, 0x0000023cbbe93798]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (3 events):
+Event: 0.116 Thread 0x0000023cde472800 redefined class name=java.io.FileOutputStream, count=1
+Event: 0.117 Thread 0x0000023cde472800 redefined class name=java.io.File, count=1
+Event: 0.118 Thread 0x0000023cde472800 redefined class name=java.net.URLStreamHandler, count=1
+
+Internal exceptions (2 events):
+Event: 0.029 Thread 0x0000023cb9f84800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x0000000716e07ce0) thrown at [C:\jenkins\workspace\Zulu\zulu-platform-build\35662\zulu-src.git\hots
+Event: 0.029 Thread 0x0000023cb9f84800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x0000000716e07fc8) thrown at [C:\jenkins\workspace\Zulu\zulu-platform-build\35662\zulu-src.git\hotspot\src\share\vm\p
+
+Events (10 events):
+Event: 0.125 loading class jdk/internal/misc/TerminatingThreadLocal$1 done
+Event: 0.125 Thread 0x0000023cb9f84800 Thread exited: 0x0000023cb9f84800
+Event: 0.125 loading class java/net/SocksSocketImpl
+Event: 0.125 Thread 0x0000023cb9f84800 Thread added: 0x0000023cb9f84800
+Event: 0.125 loading class java/lang/Shutdown
+Event: 0.125 loading class java/lang/Shutdown done
+Event: 0.125 loading class java/lang/Shutdown$Lock
+Event: 0.125 loading class java/lang/Shutdown$Lock done
+Event: 0.125 loading class java/net/SocksConsts
+Event: 0.125 Thread 0x0000023cb9f84800 Thread exited: 0x0000023cb9f84800
+
+
+Dynamic libraries:
+0x00007ff7f9b30000 - 0x00007ff7f9b80000 	C:\Program Files\Zulu\zulu-8\bin\java.exe
+0x00007ffc9cf70000 - 0x00007ffc9d168000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc9ccc0000 - 0x00007ffc9cd82000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffc9c9c0000 - 0x00007ffc9ccbe000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x0000000070ae0000 - 0x0000000070b1c000 	C:\WINDOWS\System32\cyinjct.dll
+0x00007ffc9c840000 - 0x00007ffc9c849000 	C:\WINDOWS\System32\ntnativeapi.dll
+0x00007ffc9c820000 - 0x00007ffc9c83e000 	C:\WINDOWS\System32\cyvera.dll
+0x00007ffc9c7b0000 - 0x00007ffc9c820000 	C:\WINDOWS\System32\cyvrtrap.dll
+0x00007ffc9c050000 - 0x00007ffc9c102000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffc9b420000 - 0x00007ffc9b4be000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffc9bf40000 - 0x00007ffc9bfe0000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffc9c890000 - 0x00007ffc9c9b3000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffc9a930000 - 0x00007ffc9a957000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffc9cd90000 - 0x00007ffc9cf2d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffc9a680000 - 0x00007ffc9a6a2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffc9b5a0000 - 0x00007ffc9b5cb000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffc9a810000 - 0x00007ffc9a927000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffc9a960000 - 0x00007ffc9a9fd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffc9aa70000 - 0x00007ffc9ab70000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc70400000 - 0x00007ffc7069a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16\COMCTL32.dll
+0x00007ffc9b5e0000 - 0x00007ffc9b60f000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffc92d90000 - 0x00007ffc92da5000 	C:\Program Files\Zulu\zulu-8\jre\bin\vcruntime140.dll
+0x00007ffc663c0000 - 0x00007ffc6645b000 	C:\Program Files\Zulu\zulu-8\jre\bin\msvcp140.dll
+0x000000006f590000 - 0x000000006fe03000 	C:\Program Files\Zulu\zulu-8\jre\bin\server\jvm.dll
+0x00007ffc9bf30000 - 0x00007ffc9bf38000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffc79a80000 - 0x00007ffc79a89000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffc9bfe0000 - 0x00007ffc9c04b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffc88e40000 - 0x00007ffc88e67000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc90cb0000 - 0x00007ffc90cba000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc98d20000 - 0x00007ffc98d32000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffc928e0000 - 0x00007ffc928f0000 	C:\Program Files\Zulu\zulu-8\jre\bin\verify.dll
+0x00007ffc92810000 - 0x00007ffc9283b000 	C:\Program Files\Zulu\zulu-8\jre\bin\java.dll
+0x00007ffc64dc0000 - 0x00007ffc64df9000 	C:\Program Files\Zulu\zulu-8\jre\bin\instrument.dll
+0x00007ffc9c770000 - 0x00007ffc9c7a7000 	C:\Program Files\Palo Alto Networks\Traps\cyjagent.dll
+0x00007ffc927f0000 - 0x00007ffc92808000 	C:\Program Files\Zulu\zulu-8\jre\bin\zip.dll
+0x00007ffc9b7c0000 - 0x00007ffc9bf2f000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffc97f60000 - 0x00007ffc98704000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007ffc9c350000 - 0x00007ffc9c6a3000 	C:\WINDOWS\System32\combase.dll
+0x00007ffc99e30000 - 0x00007ffc99e5e000 	C:\WINDOWS\SYSTEM32\Wldp.dll
+0x00007ffc9abf0000 - 0x00007ffc9acbd000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffc9c6c0000 - 0x00007ffc9c76d000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007ffc9af50000 - 0x00007ffc9afa5000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffc9a420000 - 0x00007ffc9a444000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ffc8cd80000 - 0x00007ffc8cd9a000 	C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin\breakgen64.dll
+0x00007ffc927a0000 - 0x00007ffc927bc000 	C:\Program Files\Zulu\zulu-8\jre\bin\net.dll
+0x00007ffc99c20000 - 0x00007ffc99c8a000 	C:\WINDOWS\system32\mswsock.dll
+0x00007ffc98800000 - 0x00007ffc989e4000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ffc9a5a0000 - 0x00007ffc9a622000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\lib\idea_rt.jar=55557:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin -Dfile.encoding=UTF-8 -agentpath:C:\Program Files\Palo Alto Networks\Traps\cyjagent.dll 
+java_command: pramp.TwoThreeFourSum
+java_class_path (initial): C:\Program Files\Zulu\zulu-8\jre\lib\cat.jar;C:\Program Files\Zulu\zulu-8\jre\lib\charsets.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\cldrdata.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\crs-agent.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\dnsns.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\jaccess.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\localedata.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\nashorn.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\openeddsa.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\sunec.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\sunmscapi.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\zipfs.jar;C:\Program Files\Zulu\zulu-8\jre\lib\jce.jar;C:\Program Files\Zulu\zulu-8\jre\lib\jfr.jar;C:\Program Files\Zulu\zulu-8\jre\lib\jsse.jar;C:\Program Files\Zulu\zulu-8\jre\lib\management-agent.jar;C:\Program Files\Zulu\zulu-8\jre\lib\resources.jar;C:\Program Files\Zulu\zulu-8\jre\lib\rt.jar;C:\muskGit\target\classes;C:\Users\musgupta\.m2\repository\org\springframework\boot\spring-boot-starter\2.2.1.RELEASE\spring-boot-starter-2.2.1.RELEASE.jar;C:\Users\musgupta\.m2\repository\org\springframework\boot\spring-boot\2.2.1.RELEASE\spring-boot-2.2.1.RELEASE.jar;C:\Users\musgupta\.m2\repository\org\springframework\spring-context\5.2.1.RELEASE\spring-context-5.2.1.RELEASE.jar;C:\Users\musgupta\.m2\repository\org\springframework\spring-aop\5.2.1.RELEASE\spring-aop-5.2.1.RELEASE.jar;C:\Users\musgupta\.m2\repository\org\springframework\spring-beans\5.2.1.RELEASE\spring-beans-5.2.1.RELEASE.jar;C:\Users\musgupta\.m2\repository\org\springframework\spring-expression\5.2.1.RELEASE\spring-expression-5.2.1.RELEASE.jar;C:\Users\musgupta\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.2.1.RELEASE\spring-boot-autoconfigure-2.2.1.RELEASE.jar;C:\Users\
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Zulu\zulu-8\
+CLASSPATH=C:\Program Files\Teradata\Client\17.20\bin\;C:\Program Files\Teradata\Client\17.20\bin\tdgeospatial.jar;C:\Program Files\Teradata\Client\17.20\bin\;C:\Program Files\Teradata\Client\17.20\bin\jmsam.jar
+PATH=C:\Program Files\Zulu\zulu-8\bin\;C:\Informatica\10.5.1\clients\tools\datadirect;C:\Informatica\CDIPC_Client\clients\tools\datadirect;C:\Program Files\OpenLogic\jdk-11.0.21.9-hotspot\bin;C:\Program Files\Teradata\Client\17.20\bin;C:\Program Files (x86)\Teradata\Client\17.20\bin;C:\Users\musgupta\Downloads\Installed\WINDOWS.X64_193000_oracle_db_home\bin;C:\Informatica\10.5.1\clients\tools\datadirect;C:\Informatica\10.5.1\clients\tools\odbcdrv;C:\Informatica\10.5.1\clients\tools\jdbcdrv;C:\Informatica\10.5.1\clients\tools\sharedlibs;c:\Informatica\10.5\clients\tools\datadirect;c:\Informatica\10.5\clients\tools\odbcdrv;c:\Informatica\10.5\clients\tools\jdbcdrv;c:\Informatica\10.5\clients\tools\sharedlibs;C:\Informatica\10.5\clients\tools\datadirect;C:\Informatica\10.5\clients\tools\odbcdrv;C:\Informatica\10.5\clients\tools\jdbcdrv;C:\Informatica\10.5\clients\tools\sharedlibs;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Zulu\zulu-8\\bin;C:\Gradle\gradle-4.10.2\bin;C:\pc2cmusk\chef;C:\Program Files\PuTTY\;C:\Program Files\Perforce\;C:\Users\musgupta\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Users\musgupta\Downloads\Installed\apache-ant-1.9.16\bin;C:\Users\musgupta\Downloads\Installed\apache-maven-3.3.9\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Java\jre-1.8\bin;C:\Users\musgupta\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\musgupta\AppData\Local\Programs\Python\Python310\;C:\Users\musgupta\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin;;C:\Users\musgupta\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\musgupta\AppData\Roaming\npm
+USERNAME=musgupta
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.4957)
+HyperV virtualization detected
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 140 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 33250360k(15933392k free), swap 42163256k(9083732k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.422-b05) for windows-amd64 JRE (Zulu8.80.0.18-Gov-SA) (1.8.0_422-b05), built on Jul  9 2024 22:38:13 by "abrygin" with MS VC++ 15.9 (VS2017)
+
+time: Tue Nov 12 12:06:42 2024
+timezone: India Standard Time
+elapsed time: 0.168971 seconds (0d 0h 0m 0s)
+
